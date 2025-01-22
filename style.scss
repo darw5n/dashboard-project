@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+$white:#fff;
+$black:#333;
+
+$grey-color-100:#e4e4e4;
+$grey-color-300:#c7c7c7;
+$grey-color-400:#ababab;
+$grey-color-500:#8e8e8e;
+$grey-color-600:#6a6a6a;
+$grey-color-700:#464646;
+$grey-color-800:#222222;
+
+$azure-color-500:#0FA2E6;
+$yellow-color-500:#E6B40F;
+
+html{
+    background-color: $white;
+    font-family: "Inter", serif;
+    font-size: 16px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+
+    grid-template-rows: 1fr 5fr;
+
+    margin: 0 auto;
+    height: 100vh;
+
+}
+.header{
+    grid-column: 2 / 4;
+    background-color: $white;
+    
+}
+.sidebar{
+    grid-row: 1 / 4;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: $azure-color-500;
+}
+.main-content, .main-content-side{
+    background-color: $grey-color-100;
+    padding:1rem;
+
+}
+.main-content{
+    grid-column: 2 / 3;
+
+    & .main-content-container{
+        --auto-grid-min-size: 16rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+        grid-gap: 1rem;
+    }
+}
+.main-content-side{
+    grid-column: 3 / 4;
+}
+
+.card{
+    background-color: $white;
+    padding: .5rem;
+    border-radius: .5rem;
+}
