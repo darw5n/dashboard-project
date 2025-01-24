@@ -42,9 +42,40 @@ body{
 }
 .sidebar{
     grid-row: 1 / 4;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding: 2rem;
     background-color: $azure-color-500;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+ 
+    color: $white;
+
+    .sidebar-head{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+ 
+        i{
+            font-size:xx-large;
+        }
+    }
+
+    ul{
+        padding: 0;
+    }
+    li{
+        display: block;
+        font-size: 1.2rem;
+
+        &+li{
+            margin-top: 1rem;
+        }
+        i{
+            margin-right: .5rem;
+        }
+    }
 }
 .main-content, .main-content-side{
     background-color: $grey-color-100;

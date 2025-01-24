@@ -23,9 +23,35 @@ body {
 
 .sidebar {
   grid-row: 1/4;
-  padding-left: 20px;
-  padding-top: 20px;
+  padding: 2rem;
   background-color: #0FA2E6;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fff;
+}
+.sidebar .sidebar-head {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sidebar .sidebar-head i {
+  font-size: xx-large;
+}
+.sidebar ul {
+  padding: 0;
+}
+.sidebar li {
+  display: block;
+  font-size: 1.2rem;
+}
+.sidebar li + li {
+  margin-top: 1rem;
+}
+.sidebar li i {
+  margin-right: 0.5rem;
 }
 
 .main-content, .main-content-side {
